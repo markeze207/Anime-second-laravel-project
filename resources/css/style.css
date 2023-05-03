@@ -1,0 +1,160 @@
+.nav__bar {
+    margin-bottom: -30px;
+}
+
+.nav__bar-item {
+    text-align: center;
+}
+
+.style {
+    text-align: center;
+}
+
+.nav__bar-item li{
+    margin: 15px;
+    margin-left: 25px;
+    display: inline-flex;
+}
+
+.nav__bar-item a {
+    font-family: Montserrat;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+}
+
+.nav__bar-item a:hover {
+    color: #7971ea;
+}
+
+.active {
+    font-family: Montserrat;
+    color: #7971ea;
+}
+
+.photo__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photo__container-image {
+    text-align: center;
+    max-width: 300px;
+}
+
+.photo__container-text {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.photo__container img {
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    display: block;
+    transition: 1s;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.photo__container img:hover {
+    width: 250px;
+    height: 250px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-form__item {
+    font-family: Montserrat;
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0.5px solid #ced4da;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.result__text {
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.info__container-title {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__container-content {
+    font-family: Montserrat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__container-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.info__container-voiceovers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.voiceovers {
+
+    margin: 2px;
+
+}
+
+.info__container-watch-text {
+    font-family: Montserrat;
+    margin-bottom: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__container-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination_bootstrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__container-watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info__container-watch-video {
+    width: 500px;
+    height: 250px;
+}
+
+
