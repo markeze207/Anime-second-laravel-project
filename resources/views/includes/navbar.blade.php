@@ -3,15 +3,17 @@
 
         <div class="overlay" data-overlay></div>
 
-        <a href="{{ route('home') }}" class="logo">
+        <a href="{{ route('anime.index') }}" class="logo">
             <img src="{{ asset('assets/images/logo.svg') }}" alt="Filmlane logo">
         </a>
 
         <div class="header-actions">
 
-            <button class="search-btn">
-                <ion-icon name="search-outline"></ion-icon>
-            </button>
+            <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input style="background: none; color: white; box-shadow: none; outline: none; border:none; border-bottom: 1px solid var(--citrine); margin-top: 6px;" value="{{ isset($_GET['title']) ?? '' }}" name="title" type="text" placeholder="Search"
+                       aria-label="Search">
+            </form>
 
             @if(auth()->check())
                 <a href="{{ route('home') }}"><button class="btn btn-primary">Profile</button></a>
@@ -38,14 +40,6 @@
                 </button>
 
             </div>
-
-            <ul class="navbar-list">
-
-                <li>
-                    <a href="{{ route('anime.index') }}" class="navbar-link">Anime list</a>
-                </li>
-
-            </ul>
 
             <ul class="navbar-social-list">
 
