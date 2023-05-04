@@ -63,8 +63,8 @@
                     </tr>
 
                     </thead>
-                    @foreach($animes as $anime)
                         <tbody>
+                        @foreach($animes as $anime)
                             <tr id="block_{{ $anime->id }}">
                                 <td>
                                     {{ $anime->id }}
@@ -102,8 +102,8 @@
 
                                 </td>
                             </tr>
+                           @endforeach
                         </tbody>
-                    @endforeach
                 </table>
             </div>
             <br>
