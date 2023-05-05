@@ -21,4 +21,7 @@
     <script src="http://127.0.0.1:5173/resources/js/jquery-3.3.1.min.js"></script>
 </head>
 @yield('content')
+
+@include('includes.footer')
+@include('includes.script')
 </html>

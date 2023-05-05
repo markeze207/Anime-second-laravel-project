@@ -16,7 +16,7 @@ class AnimeController extends Controller
 
         $filter = app()->make(AnimeFilter::class, ['queryParams' => array_filter($data)]);
 
-        $animes = Anime::filter($filter)->paginate(4);
+        $animes = Anime::filter($filter)->paginate(8);
 
         return view('anime.index', compact('animes'));
     }

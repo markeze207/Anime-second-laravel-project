@@ -79,6 +79,16 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="exampleFormControlSelect1">Quality</label>
+                                <select name="quality" class="form-control" id="exampleFormControlSelect1">
+                                    <option {{ ($anime->quality == 'TS') ? 'selected' : ''}}>TS</option>
+                                    <option {{ ($anime->quality == 'HD') ? 'selected' : ''}}>HD</option>
+                                    <option {{ ($anime->quality == '2K') ? 'selected' : ''}}>2K</option>
+                                    <option {{ ($anime->quality == '4K') ? 'selected' : ''}}>4K</option>
+                                    <option {{ ($anime->quality == '8K') ? 'selected' : ''}}>8K</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <input type="submit" class="btn btn-success" value="Update">
                             </div>
 

@@ -27,6 +27,7 @@ class UpdateRequest extends FormRequest
             'title' => 'required|string',
             'content' => 'required|string',
             'preview_photo' => 'file',
+            'quality' => 'required|string',
             'voiceovers' => 'required',
         ];
     }

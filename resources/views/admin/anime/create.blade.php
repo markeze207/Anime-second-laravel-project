@@ -76,6 +76,16 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="exampleFormControlSelect1">Quality</label>
+                                <select name="quality" class="form-control" id="exampleFormControlSelect1">
+                                    <option>TS</option>
+                                    <option>HD</option>
+                                    <option>2K</option>
+                                    <option>4K</option>
+                                    <option>8K</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
                                 <input type="submit" class="btn btn-success" value="Create">
                             </div>
 

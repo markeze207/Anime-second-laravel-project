@@ -9,9 +9,9 @@
 
         <div class="header-actions">
 
-            <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+            <form action="{{ route('anime.index') }}" method="GET" class="form-inline d-flex justify-content-center md-form form-sm mt-0">
                 <i class="fas fa-search" aria-hidden="true"></i>
-                <input style="background: none; color: white; box-shadow: none; outline: none; border:none; border-bottom: 1px solid var(--citrine); margin-top: 6px;" value="{{ isset($_GET['title']) ?? '' }}" name="title" type="text" placeholder="Search"
+                <input value="{{ $_GET['title'] ?? '' }}" style="background: none; color: white; box-shadow: none; outline: none; border:none; border-bottom: 1px solid var(--citrine); margin-top: 6px;" name="title" type="text" placeholder="Search"
                        aria-label="Search">
             </form>
 

@@ -31,13 +31,13 @@
                                 </a>
 
                                 <div class="title-wrapper">
-                                    <a href="./movie-details.html">
+                                    <a href="{{ route('anime.show', $anime->id) }}">
                                         <h3 class="card-title">{{ $anime->title }}</h3>
                                     </a>
                                 </div>
 
                                 <div class="card-meta">
-                                    <div class="badge badge-outline">2K</div>
+                                    <div class="badge badge-outline">{{ $anime->quality }}</div>
 
                                     <div class="duration">
                                         <ion-icon name="time-outline"></ion-icon>
@@ -62,57 +62,6 @@
             </section>
         </article>
     </main>
-
-
-
-
-
-    <!--
-      - #FOOTER
-    -->
-
-    <footer class="footer">
-
-        <div class="footer-bottom">
-            <div class="container">
-
-                <p class="copyright">
-                    &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
-                </p>
-
-                <img src="{{ asset('assets/images/footer-bottom-img.png') }}" alt="Online banking companies logo" class="footer-bottom-img">
-
-            </div>
-        </div>
-
-    </footer>
-
-
-
-
-
-    <!--
-      - #GO TO TOP
-    -->
-
-    <a href="#top" class="go-top" data-go-top>
-        <ion-icon name="chevron-up"></ion-icon>
-    </a>
-
-
-
-
-
-    <!--
-      - custom js link
-    -->
-    <script src="{{ asset('assets/js/script.js') }}"></script>
-
-    <!--
-      - ionicon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     </body>
 @endsection
