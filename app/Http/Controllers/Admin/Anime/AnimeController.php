@@ -2,15 +2,24 @@
 
 namespace App\Http\Controllers\Admin\Anime;
 
-use App\Http\Controllers\BaseController;
 use App\Http\Requests\Admin\Anime\StoreRequest;
 use App\Http\Requests\Admin\Anime\UpdateRequest;
+use App\Service\Admin\Anime\Service;
 use App\Models\Anime;
-use App\Models\User;
 use App\Models\Voiceover;
+use App\Http\Controllers\Controller;
 
-class AnimeController extends BaseController
+
+class AnimeController extends Controller
 {
+
+    protected $admieAnimeService;
+
+    public function __construct(Service $admieAnimeService)
+    {
+        $this->admieAnimeService = $admieAnimeService;
+    }
+
     public function index()
     {
         $animes = Anime::paginate(10);

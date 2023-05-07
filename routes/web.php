@@ -27,6 +27,13 @@ Route::group(['namespace' => 'Admin', 'prefix'=>'admin', 'middleware' => 'admin'
         Route::patch('/anime/{anime}', 'AnimeController@update')->name('admin.anime.update');
         Route::delete('/anime/{anime}', 'AnimeController@destroy')->name('admin.anime.destroy');
     });
+    Route::group(['namespace' => 'Voiceovers'], function() {
+        Route::get('/voiceovers', 'VoiceoversController@index')->name('admin.voiceovers.index');
+        Route::get('/voiceovers/create', 'VoiceoversController@create')->name('admin.voiceovers.create');
+        Route::post('/voiceovers/create', 'VoiceoversController@store')->name('admin.voiceovers.store');
+        Route::get('/voiceovers/{voiceover}/edit', 'VoiceoversController@edit')->name('admin.voiceovers.edit');
+        Route::patch('/voiceovers/{voiceover}', 'VoiceoversController@update')->name('admin.voiceovers.update');
+    });
 });
 
 Auth::routes();

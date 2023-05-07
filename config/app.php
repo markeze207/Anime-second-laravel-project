@@ -196,6 +196,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         \Illuminate\View\ViewServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 
