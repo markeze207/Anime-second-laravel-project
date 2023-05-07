@@ -116,8 +116,7 @@
         $(".form_delete_anime").on("submit", function(e){
             e.preventDefault();
             const id = $(this).attr('id');
-            const animeCount = $('.anime-count').text();
-            let url = '{{ route("admin.anime.destroy", ":id") }}';
+            let url = '{{ route("admin.voiceovers.destroy", ":id") }}';
             url = url.replace(':id', id);
             $.ajax({
                 url: url,
@@ -127,7 +126,6 @@
                 },
                 success: function(data){
                     $('#block_'+id).fadeOut();
-                    $('.anime-count').text(animeCount - 1);
                 }
             });
         });

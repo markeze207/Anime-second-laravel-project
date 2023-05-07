@@ -53,4 +53,9 @@ class VoiceoversController extends Controller
 
         return redirect()->route('admin.voiceovers.index');
     }
+
+    public function destroy(Voiceover $voiceover)
+    {
+        $voiceover->delete();
+    }
 }

@@ -33,6 +33,7 @@ Route::group(['namespace' => 'Admin', 'prefix'=>'admin', 'middleware' => 'admin'
         Route::post('/voiceovers/create', 'VoiceoversController@store')->name('admin.voiceovers.store');
         Route::get('/voiceovers/{voiceover}/edit', 'VoiceoversController@edit')->name('admin.voiceovers.edit');
         Route::patch('/voiceovers/{voiceover}', 'VoiceoversController@update')->name('admin.voiceovers.update');
+        Route::delete('/voiceovers/{voiceover}', 'VoiceoversController@destroy')->name('admin.voiceovers.destroy');
     });
 });
 
