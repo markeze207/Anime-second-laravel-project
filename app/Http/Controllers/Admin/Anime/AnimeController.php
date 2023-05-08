@@ -15,11 +15,17 @@ class AnimeController extends Controller
 
     protected $admieAnimeService;
 
+    /**
+     * Get service
+     */
     public function __construct(Service $admieAnimeService)
     {
         $this->admieAnimeService = $admieAnimeService;
     }
 
+    /**
+     * Show the anime list
+     */
     public function index()
     {
         $animes = Anime::paginate(10);
@@ -27,6 +33,9 @@ class AnimeController extends Controller
         return view('admin.anime.index', compact('animes'));
     }
 
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
         $voiceovers = Voiceover::all();
@@ -34,6 +43,9 @@ class AnimeController extends Controller
         return view('admin.anime.create', compact('voiceovers'));
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
@@ -43,6 +55,9 @@ class AnimeController extends Controller
         return redirect()->route('admin.anime.index');
     }
 
+    /**
+     * Display the specified resource edit form.
+     */
     public function edit(Anime $anime)
     {
         $voiceovers = Voiceover::all();
@@ -50,6 +65,9 @@ class AnimeController extends Controller
         return view('admin.anime.edit', compact('anime', 'voiceovers'));
     }
 
+    /**
+     * Update the specified resource in storage.
+     */
     public function update(UpdateRequest $request, Anime $anime)
     {
         $data = $request->validated();
@@ -59,6 +77,9 @@ class AnimeController extends Controller
         return redirect()->route('admin.anime.index');
     }
 
+    /**
+     * Remove the specified resource from storage.
+     */
     public function destroy(Anime $anime) {
 
         $anime->delete();

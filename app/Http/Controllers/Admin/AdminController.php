@@ -9,9 +9,12 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
+
+    /**
+     * Show main admin page
+     */
     public function index()
     {
-
         $users = User::all();
         return view('admin.index', compact('users'));
     }

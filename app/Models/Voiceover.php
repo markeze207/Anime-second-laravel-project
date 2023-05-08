@@ -11,6 +11,10 @@ class Voiceover extends Model
 
     protected $guarded = [];
 
+
+    /**
+     * Return the voiceover anime
+     */
     public function animes()
     {
         return $this->belongsToMany(Anime::class);

@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 
 class AnimeController extends Controller
 {
+    /**
+     * Return anime list for api
+     */
     public function index(FilterRequest $request)
     {
 
@@ -26,6 +29,9 @@ class AnimeController extends Controller
         return AnimeResource::collection($animes);
     }
 
+    /**
+     * Return the desired anime for the api
+     */
     public function show(Anime $anime)
     {
         return new AnimeResource($anime);

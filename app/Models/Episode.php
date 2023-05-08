@@ -11,6 +11,9 @@ class Episode extends Model
 
     protected $guarded = [];
 
+    /**
+     * Return the episodes anime
+     */
     public function animes()
     {
         return $this->hasMany(Anime::class);

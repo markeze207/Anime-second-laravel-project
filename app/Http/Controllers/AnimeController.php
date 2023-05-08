@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class AnimeController extends Controller
 {
+
+    /**
+     * Show the main page
+     */
     public function index(FilterRequest $request)
     {
 
@@ -21,16 +25,9 @@ class AnimeController extends Controller
         return view('anime.index', compact('animes'));
     }
 
-    public function find()
-    {
-        $anime = Anime::where('title', $_GET['search'])->first();
-        if($anime)
-        {
-            return view('anime.find', compact('anime'));
-        }
-        dd('Не найдено');
-    }
-
+    /**
+     * Show the desired resource
+     */
     public function show(Anime $anime)
     {
         $animes = Anime::limit(4)->get();

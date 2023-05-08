@@ -13,11 +13,17 @@ class Anime extends Model
 
     protected $guarded = [];
 
+    /**
+     * Return the animes voiceovers
+     */
     public function voiceover()
     {
         return $this->belongsToMany(Voiceover::class);
     }
 
+    /**
+     * Return the animes episodes
+     */
     public function episodes()
     {
         return $this->hasMany(Episode::class);
