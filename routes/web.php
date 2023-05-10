@@ -35,6 +35,12 @@ Route::group(['namespace' => 'Admin', 'prefix'=>'admin', 'middleware' => 'admin'
         Route::patch('/voiceovers/{voiceover}', 'VoiceoversController@update')->name('admin.voiceovers.update');
         Route::delete('/voiceovers/{voiceover}', 'VoiceoversController@destroy')->name('admin.voiceovers.destroy');
     });
+    Route::group(['namespace' => 'User'], function() {
+        Route::get('/users', 'UserController@index')->name('admin.users.index');
+        Route::get('/users/{user}/edit', 'UserController@edit')->name('admin.users.edit');
+        Route::patch('/users/{user}', 'UserController@update')->name('admin.users.update');
+        Route::delete('/users/{user}', 'UserController@destroy')->name('admin.users.destroy');
+    });
 });
 
 Auth::routes();
